@@ -20,3 +20,9 @@ for domain in domains:
             arcpy.DomainToTable_management(exportGDB, domainName, exportTable + ".dbf",  "code", "desc", "")
         arcpy.TableToDomain_management(exportTable, "code", "desc", importGDB, domainName, domainDesc, "APPEND")
 
+# Correct domain code sorting if desired
+'''
+importedDomains = arcpy.da.ListDomains(importGDB)
+for domain in importedDomains:
+    arcpy.management.SortCodedValueDomain(importGDB, domain.name, "CODE", "ASCENDING")
+'''
