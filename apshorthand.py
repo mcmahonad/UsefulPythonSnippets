@@ -1,4 +1,4 @@
-# Shorthand wrapper functions to reduce verbosity of arcpy function calls I use a lot. 
+# Shorthand wrapper functions to reduce verbosity of arcpy function calls I use in terminal a lot. 
 
 import arcpy
 
