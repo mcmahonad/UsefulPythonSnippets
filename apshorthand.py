@@ -1,6 +1,8 @@
-# Shorthand wrapper functions to reduce verbosity of arcpy function calls I use in terminal a lot. 
+# Shorthand syntax for those annoyinging long ArcPy calls that get used a lot in terminal.
 
 import arcpy
+
+# return properties of a feature class
 
 def lf(fc):
         return arcpy.ListFields(fc)
@@ -12,5 +14,20 @@ def lfLen(fc):
     fieldList = lf(fc)
     return("object contains " + str(len(fieldList)) + " fields")
 
-def lfc():
+#  change arcpy workspace
+
+def setWksp(directory):
+    arcpy.env.workspace = (directory)
+
+# return objects in workspace
+
+def lFc():
     return arcpy.ListFeatureClasses()
+
+def lDat():
+    return arcpy.ListDatasets()
+
+def lTab():
+    return arcpy.ListTables()
+
+
